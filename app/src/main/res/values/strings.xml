@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Health Partner</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="title_start">ပင်မစာမျက်နှာ</string>
+    <string name="title_physicians">ဆရာဝန်များ</string>
+    <string name="title_medical_checkup">ကျန်းမာရေးအစီအစဉ်များ</string>
+    <string name="title_hospital_contacts">ဆေးရုံများ</string>
+    <string name="title_recommendation">အကြံပြုချက်များ</string>
+
+</resources>

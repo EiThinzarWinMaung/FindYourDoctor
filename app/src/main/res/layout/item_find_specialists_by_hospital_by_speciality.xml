@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/SearchByHospitalBySpecialityCard"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="@dimen/card_evaluation"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/radius_button"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imgSearchByHospitalBySpeciality"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/txtSearchByHospitalBySpecialityMM"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/txtSearchByHospitalBySpecialityMM"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/myanmar3"
+                android:textColor="@color/colorDarkBlue"
+                android:textSize="@dimen/font_size_m"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/imgSearchByHospitalBySpeciality"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_start">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.etzwm.healthcareapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.etzwm.healthcareapp.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.etzwm.healthcareapp.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_start"
+        android:name="com.etzwm.healthcareapp.ui.start.StartFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_navigation_start_to_navigation_find_specialists"
+            app:destination="@id/navigation_find_specialists"
+            app:popUpTo="@id/navigation_start" />
+        <action
+            android:id="@+id/action_navigation_start_to_hospitalContactsFragment"
+            app:destination="@id/navigation_hospital_contacts"
+            app:popUpTo="@id/navigation_start" />
+        <action
+            android:id="@+id/action_navigation_start_to_medicalCheckupPackagesByHospitalFragment"
+            app:destination="@id/navigation_medicalCheckupPackagesByHospital"
+            app:popUpTo="@id/navigation_start" />
+        <action
+            android:id="@+id/action_navigation_start_to_navigation_recommend_suggest"
+            app:destination="@id/navigation_recommend_suggest"
+            app:popUpTo="@id/navigation_start" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_find_specialists"
+        android:name="com.etzwm.healthcareapp.ui.find_the_specialists.FindSpecialistsFragment"
+        android:label="Find the Specialists"
+        tools:layout="@layout/fragment_find_specialists" >
+        <action
+            android:id="@+id/action_navigation_find_specialists_to_findSpecialistsBySpecialityFragment"
+            app:destination="@id/findSpecialistsBySpecialityFragment"
+            app:popUpTo="@id/navigation_find_specialists" />
+        <action
+            android:id="@+id/action_navigation_find_specialists_to_findSpecialistsByHospitalFragment"
+            app:destination="@id/findSpecialistsByHospitalFragment"
+            app:popUpTo="@id/navigation_find_specialists" />
+        <action
+            android:id="@+id/action_navigation_find_specialists_to_findSpecialistsByNameFragment"
+            app:destination="@id/findSpecialistsByNameFragment"
+            app:popUpTo="@id/navigation_find_specialists" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_hospital_contacts"
+        android:name="com.etzwm.healthcareapp.ui.hospital_contacts.HospitalContactsFragment"
+        android:label="Hospital Contacts"
+        tools:layout="@layout/fragment_hospital_contacts"/>
+
+    <fragment
+        android:id="@+id/navigation_recommend_suggest"
+        android:name="com.etzwm.healthcareapp.ui.recommend_suggest.RecommendSuggestFragment"
+        android:label="Recommendation &amp; Suggestion"
+        tools:layout="@layout/fragment_recommend_suggest" >
+        <action
+            android:id="@+id/action_navigation_recommend_suggest_to_recommendSuggestWriteFragment"
+            app:destination="@id/navigation_recommend_suggest_write"
+            app:popUpTo="@id/navigation_recommend_suggest" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_medical_checkup_packages"
+        android:name="com.etzwm.healthcareapp.ui.medical_checkup_packages.MedicalCheckupPackagesFragment"
+        android:label="Medical Checkup Packages"
+        tools:layout="@layout/fragment_medical_checkup_packages" >
+        <argument
+            android:name="hospitalID"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_recommend_suggest_write"
+        android:name="com.etzwm.healthcareapp.ui.recommend_suggest_write.RecommendSuggestWriteFragment"
+        android:label="Recommendation &amp; Suggestion"
+        tools:layout="@layout/fragment_recommend_suggest_write" />
+
+    <fragment
+        android:id="@+id/findSpecialistsBySpecialityFragment"
+        android:name="com.etzwm.healthcareapp.ui.find_the_specialists_by_speciality.FindSpecialistsBySpecialityFragment"
+        android:label="fragment_find_specialists_by_speciality"
+        tools:layout="@layout/fragment_find_specialists_by_speciality" >
+        <action
+            android:id="@+id/action_findSpecialistsBySpecialityFragment_to_findSpecialistsBySpecialityByPhysicianFragment"
+            app:destination="@id/findSpecialistsBySpecialityByPhysicianFragment"
+            app:popUpTo="@id/findSpecialistsBySpecialityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/findSpecialistsByHospitalFragment"
+        android:name="com.etzwm.healthcareapp.ui.find_the_specialists_by_hospital.FindSpecialistsByHospitalFragment"
+        android:label="fragment_find_specialists_by_hospital"
+        tools:layout="@layout/fragment_find_specialists_by_hospital" >
+        <action
+            android:id="@+id/action_findSpecialistsByHospitalFragment_to_findSpecialistsByHospitalBySpecialityFragment"
+            app:destination="@id/findSpecialistsByHospitalBySpecialityFragment"
+            app:popUpTo="@id/findSpecialistsByHospitalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/findSpecialistsByNameFragment"
+        android:name="com.etzwm.healthcareapp.ui.find_the_specialists_by_name.FindSpecialistsByNameFragment"
+        android:label="fragment_find_specialists_by_name"
+        tools:layout="@layout/fragment_find_specialists_by_name" >
+        <action
+            android:id="@+id/action_findSpecialistsByNameFragment_to_physicianDetailsFragment"
+            app:destination="@id/physicianDetailsFragment"
+            app:popUpTo="@id/findSpecialistsByNameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/findSpecialistsByHospitalBySpecialityFragment"
+        android:name="com.etzwm.healthcareapp.ui.find_the_specialists_by_hospital_by_speciality.FindSpecialistsByHospitalBySpecialityFragment"
+        android:label="fragment_find_specialists_by_hospital_by_speciality"
+        tools:layout="@layout/fragment_find_specialists_by_hospital_by_speciality" >
+        <argument
+            android:name="hospitalID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_findSpecialistsByHospitalBySpecialityFragment_to_findSpecialistsByHospitalBySpecialityByPhysicianFragment"
+            app:destination="@id/findSpecialistsByHospitalBySpecialityByPhysicianFragment"
+            app:popUpTo="@id/findSpecialistsByHospitalBySpecialityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/physicianDetailsFragment"
+        android:name="com.etzwm.healthcareapp.ui.physician_details.PhysicianDetailsFragment"
+        android:label="fragment_physician_details"
+        tools:layout="@layout/fragment_physician_details" >
+        <argument
+            android:name="physicianID"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_medicalCheckupPackagesByHospital"
+        android:name="com.etzwm.healthcareapp.ui.medical_checkup_packages_by_hospital.MedicalCheckupPackagesByHospitalFragment"
+        android:label="fragment_medical_checkup_packages_by_hospital"
+        tools:layout="@layout/fragment_medical_checkup_packages_by_hospital" >
+        <action
+            android:id="@+id/action_medicalCheckupPackagesByHospitalFragment_to_navigation_medical_checkup_packages"
+            app:destination="@id/navigation_medical_checkup_packages"
+            app:popUpTo="@id/navigation_medicalCheckupPackagesByHospital" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/findSpecialistsByHospitalBySpecialityByPhysicianFragment"
+        android:name="com.etzwm.healthcareapp.ui.find_the_specialists_by_hospital_by_speciality_by_physician.FindSpecialistsByHospitalBySpecialityByPhysicianFragment"
+        android:label="fragment_find_specialists_by_hospital_by_speciality_by_physician"
+        tools:layout="@layout/fragment_find_specialists_by_hospital_by_speciality_by_physician" >
+        <argument
+            android:name="specialityID"
+            app:argType="integer" />
+        <argument
+            android:name="hospitalID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_findSpecialistsByHospitalBySpecialityByPhysicianFragment_to_physicianDetailsFragment"
+            app:destination="@id/physicianDetailsFragment"
+            app:popUpTo="@id/findSpecialistsByHospitalBySpecialityByPhysicianFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/findSpecialistsBySpecialityByPhysicianFragment"
+        android:name="com.etzwm.healthcareapp.ui.find_the_specialists_by_speciality_by_physician.FindSpecialistsBySpecialityByPhysicianFragment"
+        android:label="fragment_find_specialists_by_speciality_by_physician"
+        tools:layout="@layout/fragment_find_specialists_by_speciality_by_physician" >
+        <argument
+            android:name="specialityID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_findSpecialistsBySpecialityByPhysicianFragment_to_physicianDetailsFragment"
+            app:destination="@id/physicianDetailsFragment"
+            app:popUpTo="@id/findSpecialistsBySpecialityByPhysicianFragment" />
+    </fragment>
+
+</navigation>

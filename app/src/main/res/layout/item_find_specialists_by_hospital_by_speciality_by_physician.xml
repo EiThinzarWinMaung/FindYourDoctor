@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/SearchByHospitalBySpecialityByPhysicianCard"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="@dimen/card_evaluation"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/radius_button"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtSearchByHospitalBySpecialityByPhysicianName"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/myanmar3"
+            android:textColor="@color/colorDarkBlue"
+            android:textSize="@dimen/font_size_m"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtSearchByHospitalBySpecialityByPhysicianDegree"
+            app:layout_constraintTop_toBottomOf="@id/txtSearchByHospitalBySpecialityByPhysicianName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/myanmar3"
+            android:textColor="@color/colorDarkBlue"
+            android:textSize="@dimen/font_size_m" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="@dimen/card_evaluation"
+    android:layout_marginBottom="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/radius_button">
+
+        <TextView
+            android:id="@+id/txtRecommendSuggestName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sofia Ann"
+            android:textSize="@dimen/font_size_l"
+            android:textColor="@color/colorDarkBlue"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtRecommendSuggestDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23-Nov-2019"
+            android:textSize="@dimen/font_size_m"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtRecommendSuggestHospital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="အာယု အပြည်ပြည်ဆိုင်ရာဆေးရုံ"
+            android:textSize="@dimen/font_size_s"
+            android:background="@color/colorDarkBlue"
+            android:textColor="@android:color/white"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRecommendSuggestDate"/>
+
+        <TextView
+            android:id="@+id/txtRecommendSuggestText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_size_m"
+            android:textColor="@color/colorDarkBlue"
+            android:text="ကျယ်၊၀မ်းမသွားတာရယ်တို့ကြောင့် အခေါ်အပြောမရတော့တဲ့အခွကပြင်ထာတာနဲ့ လူနာရဲ့history ကိုမေးတယ် ၊သက်ဆိုင်ရာဆရာ၀န်ညွှန်ထားတဲ့ဆေးတွေမေးတယ်၊ လိုတဲ့ပစ္စည်းလေးတွေတောင်းတယ် ။သူတို့လုပ်ရမဲ့အလုပ်ကိုတဆင့်ခြင်းလုပ်သွားလိုက်တာ လူနာညီးသံလဲမကြားရပဲ တခုပီးတခုလုပ်သွားခဲ့တာ အင်မတန်တော်ပါတယ်။ဒီ့အပြင် လူနာအတွက်ပြင်ဆင်ပီးသကာလ ထားရှိရမဲ့ပစ္စည်း၊ဆေးဝါး၊အသုံးအဆောင် အကုန်ပြင်ဆင်မှာကြားပေးတယ်၊လူနာစောင့်နပ်စ်နှင့်မိသားစု၀င်တွေကိုဆေးနဲ့ပတ်သတ်တာ ၊အစာသွင်း၊ဆီးပိုက်အကုန်လုံးကိုစိတ်ရှည်လက်ရှည်န။"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRecommendSuggestHospital"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
