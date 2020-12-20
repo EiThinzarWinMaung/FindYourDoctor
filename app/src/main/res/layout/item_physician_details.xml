@@ -15,13 +15,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/radius_button"
-        android:padding="15dp">
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/imgPhysicianDetailsHospitalLogo"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/PhysicianDetailsTextBlog"
             app:layout_constraintTop_toTopOf="parent" />
@@ -31,20 +31,55 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             app:layout_constraintLeft_toRightOf="@id/imgPhysicianDetailsHospitalLogo"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/txtPhysicianDetailsHospitalName"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/myanmar3"
                 android:textColor="@color/colorDarkBlue"
                 android:textSize="@dimen/font_size_m"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/PhysicianDetailsHospitalPhoneCall"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/PhysicianDetailsHospitalPhoneCall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorDarkBlue"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <ImageView
+                    android:id="@+id/IconPhysicianDetailsHospitalPhone"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_phone_call_white"
+                    android:layout_marginRight="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/TextPhysicianDetailsHospitalPhone"/>
+
+                <TextView
+                    android:id="@+id/TextPhysicianDetailsHospitalPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ဖုန်းခေါ်ရန်"
+                    android:fontFamily="@font/myanmar3"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/font_size_s"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
                 android:id="@+id/txtPhysicianDetailsDateTime"

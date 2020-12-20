@@ -10,6 +10,7 @@
         android:id="@+id/imgBannerSearchBySpecialityByPhysician"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:src="@drawable/banner_12"
         android:scaleType="centerCrop"
         android:alpha="0.4"
         app:layout_constraintTop_toTopOf="parent" />

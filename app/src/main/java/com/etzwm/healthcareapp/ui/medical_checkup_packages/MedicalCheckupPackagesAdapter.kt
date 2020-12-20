@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.etzwm.healthcareapp.R
@@ -18,34 +19,41 @@ import androidx.core.view.marginLeft as marginLeft1
 class MedicalCheckupPackagesAdapter(var medicalCheckupList: List<Package> = ArrayList<Package>()): RecyclerView.Adapter<MedicalCheckupPackagesAdapter.MedicalCheckupPackagesViewHolder>() {
 
     class MedicalCheckupPackagesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        @SuppressLint("WrongConstant")
         fun bind(packages: Package) {
-            Picasso.get().load(imgURL + packages.package_image).placeholder(R.drawable.placeholder_image).into(itemView.imgMedicalCheckupPackagesList)
+//            Picasso.get().load(imgURL + packages.package_image).placeholder(R.drawable.placeholder_image).into(itemView.imgMedicalCheckupPackagesList)
             itemView.txtMedicalCheckupPackagesListName.text = packages.package_name
-            itemView.txtMedicalCheckupPackagesListDescription.text = packages.package_description
+            itemView.txtMedicalCheckupPackagesListOriginalPrice.text = packages.regular_price
+            itemView.txtMedicalCheckupPackagesListPackagePrice.text = packages.special_price
 
-            if(packages.regular_price == "-") {
-                itemView.txtMedicalCheckupPackagesListOriginalPrice.visibility = View.GONE
+            // Description
+            if(packages.package_description != "-") {
+                itemView.txtMedicalCheckupPackagesListDescription.visibility = View.VISIBLE
+                itemView.txtMedicalCheckupPackagesListDescription.text = packages.package_description
             }
             else {
+                itemView.txtMedicalCheckupPackagesListDescription.visibility = View.GONE
+            }
+
+            // Regular Price
+            if(packages.regular_price != "-") {
+                itemView.txtMedicalCheckupPackagesListOriginalPrice.visibility = View.VISIBLE
                 itemView.txtMedicalCheckupPackagesListOriginalPrice.text = packages.regular_price
                 itemView.txtMedicalCheckupPackagesListOriginalPrice.setBackgroundResource(R.drawable.strike_through_text)
-                itemView.txtMedicalCheckupPackagesListPackagePrice.setPadding(10, 0,0,0)
-            }
-
-            if(packages.special_price == "-") {
-                itemView.txtMedicalCheckupPackagesListPackagePrice.visibility = View.GONE
+                itemView.txtMedicalCheckupPackagesListPackagePrice.setPadding(10,0,0,0)
             }
             else {
-                itemView.txtMedicalCheckupPackagesListPackagePrice.text = packages.special_price
+                itemView.txtMedicalCheckupPackagesListOriginalPrice.visibility = View.GONE
             }
 
-//            if(packages.package_description == "-") {
-//                itemView.txtMedicalCheckupPackagesListDescription.visibility = View.GONE
-//            }
-//            else {
-//                itemView.txtMedicalCheckupPackagesListDescription.text = packages.package_description
-//            }
+            // Special Price
+            if(packages.special_price != "-") {
+                itemView.txtMedicalCheckupPackagesListPackagePrice.visibility = View.VISIBLE
+                itemView.txtMedicalCheckupPackagesListPackagePrice.text = packages.special_price
+//                itemView.txtMedicalCheckupPackagesListPackagePrice.setPadding(0,0,0,0)
+            }
+            else {
+                itemView.txtMedicalCheckupPackagesListPackagePrice.visibility = View.GONE
+            }
         }
     }
 

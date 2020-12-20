@@ -9,6 +9,8 @@ import com.etzwm.healthcareapp.model.recommend.Recommend
 import com.etzwm.healthcareapp.toSimpleString
 import kotlinx.android.synthetic.main.item_recommend_suggest.view.*
 import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class RecommendSuggestAdapter(var recommendList: List<Recommend> = ArrayList<Recommend>()): RecyclerView.Adapter<RecommendSuggestAdapter.RecommendSuggestViewHolder>() {
 
@@ -39,6 +41,10 @@ class RecommendSuggestAdapter(var recommendList: List<Recommend> = ArrayList<Rec
 
     fun updateRecommendSuggest(recommendList: List<Recommend>) {
         this.recommendList = recommendList
+//        if(recommendList.get(0).hospital.hospital_id == 1) {
+//            this.recommendList = recommendList
+//        }
+        Collections.reverse(recommendList)
         notifyDataSetChanged()
     }
 }

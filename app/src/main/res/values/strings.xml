@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Health Partner</string>
+    <string name="app_name">Find Your Doctor</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
@@ -12,5 +12,7 @@
     <string name="title_medical_checkup">ကျန်းမာရေးအစီအစဉ်များ</string>
     <string name="title_hospital_contacts">ဆေးရုံများ</string>
     <string name="title_recommendation">အကြံပြုချက်များ</string>
+
+    <string name="google_map_text"><u>Google Map တွင် ကြည့်ရန် နှိပ်ပါ </u></string>
 
 </resources>

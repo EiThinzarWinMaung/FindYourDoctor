@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/banner_3"
+        android:src="@drawable/banner_8"
         android:alpha="0.4"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -69,7 +69,12 @@
         android:id="@+id/navigation_hospital_contacts"
         android:name="com.etzwm.healthcareapp.ui.hospital_contacts.HospitalContactsFragment"
         android:label="Hospital Contacts"
-        tools:layout="@layout/fragment_hospital_contacts"/>
+        tools:layout="@layout/fragment_hospital_contacts">
+        <action
+            android:id="@+id/action_navigation_hospital_contacts_to_hospitalContactsDetailsFragment"
+            app:destination="@id/hospitalContactsDetailsFragment"
+            app:popUpTo="@id/navigation_hospital_contacts" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_recommend_suggest"
@@ -182,6 +187,7 @@
             app:destination="@id/physicianDetailsFragment"
             app:popUpTo="@id/findSpecialistsByHospitalBySpecialityByPhysicianFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/findSpecialistsBySpecialityByPhysicianFragment"
         android:name="com.etzwm.healthcareapp.ui.find_the_specialists_by_speciality_by_physician.FindSpecialistsBySpecialityByPhysicianFragment"
@@ -194,6 +200,16 @@
             android:id="@+id/action_findSpecialistsBySpecialityByPhysicianFragment_to_physicianDetailsFragment"
             app:destination="@id/physicianDetailsFragment"
             app:popUpTo="@id/findSpecialistsBySpecialityByPhysicianFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/hospitalContactsDetailsFragment"
+        android:name="com.etzwm.healthcareapp.ui.hospital_contacts_details.HospitalContactsDetailsFragment"
+        android:label="fragment_hospital_contacts_details"
+        tools:layout="@layout/fragment_hospital_contacts_details" >
+        <argument
+            android:name="hospitalID"
+            app:argType="integer" />
     </fragment>
 
 </navigation>

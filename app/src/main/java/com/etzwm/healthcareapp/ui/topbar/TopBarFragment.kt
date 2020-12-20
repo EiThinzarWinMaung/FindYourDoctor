@@ -19,10 +19,5 @@ class TopBarFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_top_bar, container, false)
 
-        EmergencyCall.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.parse("tel:095056234")
-            startActivity(intent)
-        }
     }
 }

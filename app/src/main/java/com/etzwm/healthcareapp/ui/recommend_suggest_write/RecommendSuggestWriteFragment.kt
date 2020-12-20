@@ -158,8 +158,8 @@ class RecommendSuggestWriteFragment : Fragment() {
                 val builder = AlertDialog.Builder(context)
                 builder.apply {
                     setTitle("အတည်ပြုချက်တောင်းခြင်း")
-                    setMessage("သင်၏အမည်ကိုဖော်ပြရန် သဘောတူပါသလား ?")
-                    setIcon(android.R.drawable.ic_dialog_alert)
+                    setMessage("သင်၏အမည်ကိုဖော်ပြရန်သဘောတူပါသလား ?")
+                    setIcon(R.drawable.ic_confirmation)
 
                     setPositiveButton("သဘောတူပါသည်") {
                             dialogInterface, i ->
@@ -194,7 +194,7 @@ class RecommendSuggestWriteFragment : Fragment() {
                             dialogInterface, i ->
                         var apiClient = ApiClient()
                         var call = apiClient.writeRecommendSuggest(
-                            "Anonymous",
+                            "Anonymous (အမည်မသိ)",
                             userEmail,
                             userPhone,
                             edttxtWrite.text.toString(),

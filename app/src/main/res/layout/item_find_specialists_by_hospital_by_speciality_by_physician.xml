@@ -24,7 +24,6 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             android:fontFamily="@font/myanmar3"
             android:textColor="@color/colorDarkBlue"
             android:textSize="@dimen/font_size_m"
@@ -35,7 +34,6 @@
             app:layout_constraintTop_toBottomOf="@id/txtSearchByHospitalBySpecialityByPhysicianName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             android:fontFamily="@font/myanmar3"
             android:textColor="@color/colorDarkBlue"
             android:textSize="@dimen/font_size_m" />

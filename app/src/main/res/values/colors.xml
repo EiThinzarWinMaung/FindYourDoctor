@@ -4,12 +4,12 @@
 <!--    <color name="colorPrimaryDark">#3700B3</color>-->
 <!--    <color name="colorAccent">#03DAC5</color>-->
 
-    <color name="colorPrimary">#02A99D</color>
+    <color name="colorPrimary">#014B70</color>
     <color name="colorPrimaryDark">#FF0202</color>
-    <color name="colorAccent">#02A99D</color>
+    <color name="colorAccent">#02679A</color>
 
     <color name="colorGrey">#F4F3F3</color>
     <color name="colorRed">#FF0202</color>
     <color name="colorDarkBlue">#02679A</color>
-    <color name="colorLightBlue">#02A99D</color>
+<!--    <color name="colorLightBlue">#02A99D</color>-->
 </resources>

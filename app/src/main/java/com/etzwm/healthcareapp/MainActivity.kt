@@ -1,20 +1,15 @@
 package com.etzwm.healthcareapp
 
-import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.fragment.app.FragmentManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.concurrent.fixedRateTimer
+import kotlinx.android.synthetic.main.fragment_top_bar.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,6 +36,12 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         supportActionBar?.hide()
+
+        EmergencyCall.setOnClickListener {
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:01500005")
+            startActivity(intent)
+        }
 
 //        setSupportActionBar(AppToolbar)
 

@@ -7,12 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.etzwm.healthcareapp.R
+import com.etzwm.healthcareapp.model.hospitals.Hospital
 import kotlinx.android.synthetic.main.fragment_hospital_contacts.*
 import kotlinx.android.synthetic.main.fragment_hospital_contacts.BlueLoading
 
-class HospitalContactsFragment : Fragment() {
+class HospitalContactsFragment : Fragment(), HospitalContactsAdapter.ClickListener {
 
     lateinit var hospitalContactsAdapter: HospitalContactsAdapter
     lateinit var hospitalContactsViewmodel: HospitalContactsViewmodel
@@ -37,6 +39,7 @@ class HospitalContactsFragment : Fragment() {
             adapter = hospitalContactsAdapter
         }
 
+        hospitalContactsAdapter.setOnClickListener(this)
         observeViewmodel()
     }
 
@@ -58,5 +61,10 @@ class HospitalContactsFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         hospitalContactsViewmodel.loadHospital()
+    }
+
+    override fun onClick(hospital: Hospital) {
+         var action = HospitalContactsFragmentDirections.actionNavigationHospitalContactsToHospitalContactsDetailsFragment(hospital.hospital_id)
+        findNavController().navigate(action)
     }
 }

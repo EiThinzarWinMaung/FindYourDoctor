@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ui.hospital_contacts_details.HospitalContactsDetailsFragment">
+
+    <ImageView
+        android:id="@+id/imgHospitalContactsDetailsBanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/HospitalContactsDetailsLogoBlog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imgHospitalContactsDetailsLogo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txtHospitalContactsDetailsName"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtHospitalContactsDetailsName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/myanmar3"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="@dimen/font_size_l"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@id/imgHospitalContactsDetailsLogo"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/HospitalContactsDetailsGoogleMap"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/google_map_text"
+                    android:textColor="@color/colorDarkBlue"
+                    android:textSize="@dimen/font_size_m"
+                    app:layout_constraintLeft_toRightOf="@id/imgHospitalContactsDetailsLogo"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtHospitalContactsDetailsName" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="@dimen/card_radius"
+                app:cardElevation="@dimen/card_evaluation"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/HospitalContactsDetailsLogoBlog">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/radius_button"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/LocationIcon"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_map_pin"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/txtHospitalContactsDetailsAddress"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtHospitalContactsDetailsAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/myanmar3"
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="@dimen/font_size_m"
+                        app:layout_constraintHorizontal_weight="9.5"
+                        app:layout_constraintLeft_toRightOf="@id/LocationIcon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/PhoneIcon"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_phone_call"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/txtHospitalContactsDetailsPhone"
+                        app:layout_constraintTop_toBottomOf="@id/txtHospitalContactsDetailsAddress" />
+
+                    <TextView
+                        android:id="@+id/txtHospitalContactsDetailsPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="@dimen/font_size_m"
+                        app:layout_constraintHorizontal_weight="9.5"
+                        app:layout_constraintLeft_toRightOf="@id/PhoneIcon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtHospitalContactsDetailsAddress" />
+
+                    <ImageView
+                        android:id="@+id/FacebookIcon"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_facebook"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/txtHospitalContactsDetailsFacebook"
+                        app:layout_constraintTop_toBottomOf="@id/txtHospitalContactsDetailsPhone" />
+
+                    <TextView
+                        android:id="@+id/txtHospitalContactsDetailsFacebook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="@dimen/font_size_m"
+                        app:layout_constraintHorizontal_weight="9.5"
+                        app:layout_constraintLeft_toRightOf="@id/FacebookIcon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtHospitalContactsDetailsPhone" />
+
+                    <ImageView
+                        android:id="@+id/MailIcon"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_gmail"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/txtHospitalContactsDetailsMail"
+                        app:layout_constraintTop_toBottomOf="@id/txtHospitalContactsDetailsFacebook" />
+
+                    <TextView
+                        android:id="@+id/txtHospitalContactsDetailsMail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="@dimen/font_size_m"
+                        app:layout_constraintHorizontal_weight="9.5"
+                        app:layout_constraintLeft_toRightOf="@id/MailIcon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtHospitalContactsDetailsFacebook" />
+
+                    <ImageView
+                        android:id="@+id/WebsiteIcon"
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/ic_website"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/txtHospitalContactsDetailsWebsite"
+                        app:layout_constraintTop_toBottomOf="@id/txtHospitalContactsDetailsMail" />
+
+                    <TextView
+                        android:id="@+id/txtHospitalContactsDetailsWebsite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/colorDarkBlue"
+                        android:textSize="@dimen/font_size_m"
+                        app:layout_constraintHorizontal_weight="9.5"
+                        app:layout_constraintLeft_toRightOf="@id/WebsiteIcon"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtHospitalContactsDetailsMail" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/BlueLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateDrawable="@drawable/blue_loading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
